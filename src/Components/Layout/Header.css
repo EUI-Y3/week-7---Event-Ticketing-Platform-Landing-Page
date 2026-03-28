@@ -1,0 +1,49 @@
+header {
+width: 80%;
+margin: 0 auto; 
+padding: 40px 40px;
+justify-content: space-between;
+align-items: center; 
+display: flex;
+flex-direction: row;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.header_button{
+ display: inline-flex;
+padding: 11px 22px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 49px;
+border: 1px solid rgba(242, 156, 183, 0.36);
+background: rgba(37, 37, 37, 0.16);   
+}
+
+.button_text{
+  color: #FBD050;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+}
+
+.button_icon{
+width: 24px;
+height: 24px;    
+}

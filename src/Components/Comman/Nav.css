@@ -1,0 +1,25 @@
+.nav__link {
+color: #DEAAFF;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  right: 0;
+  background-color: #FBD050;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}

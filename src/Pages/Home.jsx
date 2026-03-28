@@ -18,6 +18,10 @@ import Event3 from '../Assets/event 3.png';
 import Event4 from '../Assets/event 4.png';
 import Event5 from '../Assets/event 5.png';
 import Event6 from '../Assets/event 6.png';
+import Tablet from '../Assets/tablet png.png';
+import Calender from '../Assets/calender icon.svg';
+import Clock from '../Assets/clock icon.svg';
+import Location from '../Assets/location icon.svg';
 
 const Home = () => {
     return (
@@ -32,7 +36,6 @@ const Home = () => {
                     <Button text="Explore Events"/>
                 </div>
             </section>
-
             <section className='section2'>
                 <h2>Event Categories</h2>
                 <div className='section2_div2'>
@@ -117,7 +120,31 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            
+            <section className='section4'>
+                <h2>Electric Dreams Festival 2026</h2>
+                <div className='section4_div1'>
+                    <img src={Tablet} alt="" />
+                    <div className='section4_div2'>
+                    <h4 className='section4_h4'>The biggest electronic music festival of the year featuring <br></br> world-renowned DJs and producers. Experience stunning visuals,<br></br> incredible sound systems, and an unforgettable atmosphere.</h4>
+                    <div className='section4_div3'>
+                        <div className='section4_div4'>
+                            <img className='section4_icons' src={Calender} alt="" />
+                            <h4 className='section4_h4'>June 15, 2026</h4>
+                        </div>
+                        <div className='section4_div4'>
+                            <img className='section4_icons' src={Clock} alt="" />
+                            <h4 className='section4_h4'>8:00 PM</h4>
+                        </div>
+                        <div className='section4_div4'>
+                            <img className='section4_icons' src={Location} alt="" />
+                            <h4 className='section4_h4'>City Center Stadium</h4>
+                        </div>
+                    </div>
+                    <Button text='Get Tickets Now'/>
+                    </div>
+                </div>
+            </section>
+
         </main>
         </>
     );

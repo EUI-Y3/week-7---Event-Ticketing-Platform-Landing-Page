@@ -5,7 +5,7 @@ import Hero_img from '../Assets/hero img.png';
 import Button from '../Components/Comman/Button';
 import Concert_Icon from '../Assets/streamline-ultimate_concert-dj.svg';
 import Comedy from '../Assets/material-symbols-light_theater-comedy-outline-rounded.svg';
-import Theatre from '../Assets/ticket icon.svg';
+import Theatre from '../Assets/thearter icon.svg';
 import Workshop from '../Assets/workshop icon.svg';
 import Talks from '../Assets/talks icon.svg';
 import Sports from '../Assets/sports icon.svg';
@@ -22,6 +22,8 @@ import Tablet from '../Assets/tablet png.png';
 import Calender from '../Assets/calender icon.svg';
 import Clock from '../Assets/clock icon.svg';
 import Location from '../Assets/location icon.svg';
+import Card2 from '../Components/Comman/Card2';
+import Card3 from '../Components/Comman/Card3';
 
 const Home = () => {
     return (
@@ -144,7 +146,21 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
+            <section className='section5'>
+                <h2>Why Choose Our Platform?</h2>
+                <div className='section3_div2'>
+                    <Card2 icon={Concert_Icon} title="Easy Booking" subtitle="Book tickets in just a few clicks"/>
+                    <Card2 icon={Comedy} title="Secure Payment" subtitle="Your transactions are safe and encrypted"/>
+                    <Card2 icon={Theatre} title="Wide Variety" subtitle="Thousands of events to choose from"/>
+                    <Card2 icon={Workshop} title="24/7 Support" subtitle="We are here to help you anytime"/>
+                </div>
+                 <div className='section3_div2'>
+                    <Card3 title="10K+" subtitle="Events"/>
+                    <Card3 title="500K+" subtitle="Happy Users"/>
+                    <Card3 title="50+" subtitle="Cities"/>
+                    <Card3 title="4.8" subtitle="Rating"/>
+                </div>
+            </section>
         </main>
         </>
     );

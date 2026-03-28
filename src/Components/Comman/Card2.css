@@ -1,36 +1,79 @@
-.card2{
-display: flex;
-width: 273px;
-padding: 14px 36px;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-gap: 12px;
-border-radius: 24px;
-border: 1px solid rgba(242, 156, 183, 0.36);
-background: rgba(37, 37, 37, 0.16);    
+.card2 {
+    display: flex;
+    width: 273px;
+    padding: 14px 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    border-radius: 24px;
+    border: 1px solid rgba(242, 156, 183, 0.36);
+    background: rgba(37, 37, 37, 0.16);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.Card2_icon{
-width: 77px;
-height: 77px;    
+.card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.12) 50%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.55s ease;
 }
 
-.Card2_h5{
-color: #FBD050;
-text-align: center;
-font-family: Inter;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 28px;
+.card2:hover::before {
+    left: 160%;
 }
 
-.Card2_h6{
-color: #DEAAFF;
-font-family: Inter;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 26px;
+.card2:hover {
+    transform: translateY(-6px);
+    border-color: rgba(251, 208, 80, 0.5);
+    box-shadow:
+        0 16px 35px -8px rgba(82, 42, 112, 0.5),
+        0 0 18px rgba(251, 208, 80, 0.2);
+}
+
+.card2:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -8px rgba(82, 42, 112, 0.4);
+}
+
+.Card2_icon {
+    width: 77px;
+    height: 77px;
+    transition: transform 0.3s ease;
+}
+
+.card2:hover .Card2_icon {
+    transform: translateY(-3px);
+}
+
+.Card2_h5 {
+    color: #FBD050;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.Card2_h6 {
+    color: #DEAAFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
 }

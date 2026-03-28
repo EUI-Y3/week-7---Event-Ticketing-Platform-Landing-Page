@@ -1,0 +1,64 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #0E0911;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.preloader--fade {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.preloader__logo {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #522A70, #FBD050);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 3px;
+    animation: preloader-pulse 2s ease-in-out infinite;
+}
+
+@keyframes preloader-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.97); }
+}
+
+.preloader__ring {
+    animation: preloader-spin 1.6s linear infinite;
+}
+
+.preloader__ring-track {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.06);
+    stroke-width: 3;
+}
+
+.preloader__ring-arc {
+    fill: none;
+    stroke: url(#preloader-grad);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 160;
+    stroke-dashoffset: 60;
+}
+
+@keyframes preloader-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

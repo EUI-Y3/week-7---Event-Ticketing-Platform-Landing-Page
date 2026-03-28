@@ -24,10 +24,18 @@ import Clock from '../Assets/clock icon.svg';
 import Location from '../Assets/location icon.svg';
 import Card2 from '../Components/Comman/Card2';
 import Card3 from '../Components/Comman/Card3';
+import Preloader from '../Components/Comman/preloader';
+import Form_input from '../Components/Comman/Form_input';
+import Person from '../Assets/person icon.svg';
+import Mail from '../Assets/mail icon.svg';
+import Ticket from '../Assets/ticket icon.svg'
+import Number from '../Assets/material-symbols-light_theater-comedy-outline-rounded.svg';
+
 
 const Home = () => {
     return (
         <>
+        <Preloader/>
         <Header/>
         <main>
             <section className="hero_section">
@@ -159,6 +167,25 @@ const Home = () => {
                     <Card3 title="500K+" subtitle="Happy Users"/>
                     <Card3 title="50+" subtitle="Cities"/>
                     <Card3 title="4.8" subtitle="Rating"/>
+                </div>
+            </section>
+            <section className='section6'>
+                <div className='section6_div1'>
+                    <h2>Book Your Tickets</h2>
+                    <h4 className='section6_h4'>
+                        Fill in your details to complete your booking
+                    </h4>
+                </div>
+                <div className='bookform'>
+                    <div className='bookform_div1'>
+                        <Form_input title="Full Name" icon={Person}  text="Enter full name" />
+                         <Form_input title="Email Address" icon={Mail}  text="Enter your email" />
+                          <Form_input title="Select Event" icon={Ticket}  text="Select your event" />
+                           <Form_input title="Number of Tickets" icon={Number}  text="Enter number of ticket" />
+                           <div className='bookform_btn'>
+                           <Button text="Book Ticket"/>
+                           </div>
+                    </div>
                 </div>
             </section>
         </main>

@@ -30,6 +30,12 @@ import Person from '../Assets/person icon.svg';
 import Mail from '../Assets/mail icon.svg';
 import Ticket from '../Assets/ticket icon.svg'
 import Number from '../Assets/material-symbols-light_theater-comedy-outline-rounded.svg';
+import Card4 from '../Components/Comman/Card4';
+import Profile1 from '../Assets/profile png.png';
+import Profile2 from '../Assets/profile2.png';
+import Profile3 from '../Assets/profile3.png';
+import Footer from '../Components/Layout/Footer';
+
 
 
 const Home = () => {
@@ -188,7 +194,16 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <section className='section7'>
+                <h2>What Our Users Say</h2>
+                <div className='section3_div2'>
+                    <Card4 img={Profile1} name="Ahmed Tamer" title="Event Organizer" comment="The best event ticketing platform I have used. Great variety of events and secure payment options."/>
+                     <Card4 img={Profile2} name="Sarah Mohamed" title="Music Enthusiast" comment="Amazing platform! I found the perfect concert tickets and the booking process was seamless. Highly recommend!"/>
+                      <Card4 img={Profile3} name="Sandy Mady" title="Theatre Lover" comment="I love how easy it is to discover new events. The interface is clean and the customer support is excellent!"/>
+                </div>
+            </section>
         </main>
+        <Footer/>
         </>
     );
 }

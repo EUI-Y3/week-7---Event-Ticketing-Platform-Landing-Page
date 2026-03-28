@@ -1,0 +1,117 @@
+.card4 {
+    width: 374px;
+    min-height: 266px;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(242, 156, 183, 0.36);
+    background: rgba(35, 33, 35, 0.20);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.07) 50%,
+        transparent 100%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.55s ease;
+    pointer-events: none;
+}
+
+.card4:hover::before {
+    left: 160%;
+}
+
+.card4:hover {
+    transform: translateY(-6px);
+    border-color: rgba(251, 208, 80, 0.5);
+    box-shadow:
+        0 16px 35px -8px rgba(82, 42, 112, 0.5),
+        0 0 18px rgba(251, 208, 80, 0.2);
+}
+
+.card4:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -8px rgba(82, 42, 112, 0.4);
+}
+
+.card4_div1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.card4_div2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.card4_stars {
+    width: 80px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.card4_comment {
+    color: #DEAAFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.card4_h3 {
+    color: #FBD050;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+.card4_h5 {
+    color: #DEAAFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.card4_img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+@media (max-width: 900px) {
+    .card4 {
+        width: 100%;
+        max-width: 374px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card4 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
